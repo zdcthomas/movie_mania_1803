@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   end
 
   resources :actors, only: [:new, :create, :index]
+
+  namespace :admin do
+    resources :categories, only: [:index]
+  end
 end
