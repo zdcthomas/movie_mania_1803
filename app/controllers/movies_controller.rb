@@ -12,7 +12,6 @@ class MoviesController < ApplicationController
   def create
     director = Director.find(params[:director_id])
     movie = director.movies.create(movies_params)
-    binding.pry
     redirect_to movie_path(slug: movie.slug)
   end
 
