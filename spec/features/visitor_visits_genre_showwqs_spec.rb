@@ -16,7 +16,7 @@ RSpec.feature "VisitorVisitsGenreShowwqs", type: :feature do
 
         visit genre_path(genre1)
         
-        genre.movies.each do |movie|
+        genre1.movies.each do |movie|
           expect(page).to have_content(movie.title)
         end
       end

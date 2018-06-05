@@ -16,6 +16,11 @@ class GenresController < ApplicationController
       redirect_to genres_path
     end
   end
+
+  def show
+    @genre = Genre.find(params[:id])
+    @movies = @genre.movies
+  end
   private
 
   def genre_params
