@@ -22,6 +22,18 @@ RSpec.feature "VisitorVisitsMovieShows", type: :feature do
           expect(page).to have_content(genre.name)
         end
       end
+      it 'should show the integer rating for the movie' do
+        director = Director.create!(name:'Mel Brooks')
+        movie = Movie.create!(title:'spaceballs',
+                              description:'Things in space',
+                              director_id:director.id,
+                              rating: 5)
+
+        visit movie_path(movie.slug)
+        expect(page).to have_content("Rating: #{movie.rating}")
+
+
+      end
     end
   end
 end
