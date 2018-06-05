@@ -31,8 +31,36 @@ RSpec.feature "VisitorVisitsMovieShows", type: :feature do
 
         visit movie_path(movie.slug)
         expect(page).to have_content("Rating: #{movie.rating}")
+      end
+      it 'should show at least three other movies with the same rating' do
+        director = Director.create!(name:'Mel Brooks(I know he didnt direct the blues brothers)')
+        movie1 = Movie.create!(title:'spaceballs',
+                              description:'Things in space',
+                              director_id:director.id,
+                              rating:5)
+        movie2 = Movie.create!(title:'Blues Brothers',
+                              description:'A Mission From God',
+                              director_id:director.id,
+                              rating:5)
+        movie3 = Movie.create!(title:'Some other movie',
+                              description:'stop making me think of movies!',
+                              director_id:director.id,
+                              rating:5)
+        movie4 = Movie.create!(title:'I cant think of more movies',
+                              description:'too many movies',
+                              director_id:director.id,
+                              rating:5)
+        movie5 = Movie.create!(title:"this one shouldn't be on the list",
+                              description:'sigh',
+                              director_id:director.id,
+                              rating:2)
+        visit movie_path(movie1.slug)
 
-
+        expect(page).to have_content("Similarly Rated Movies:")
+        expect(page).to have_content(movie2.title)
+        expect(page).to have_content(movie3.title)
+        expect(page).to have_content(movie4.title)
+        expect(page).to_not have_content(movie5.title)
       end
     end
   end
