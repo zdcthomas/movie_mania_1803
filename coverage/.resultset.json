@@ -203,10 +203,6 @@
         1,
         null
       ],
-      "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
       "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/spec/features/admin_sees_categories_index_spec.rb": [
         1,
         null,
@@ -567,6 +563,7 @@
         1,
         1,
         1,
+        1,
         null,
         null
       ],
@@ -718,7 +715,7 @@
         null,
         null,
         1,
-        1,
+        null,
         1,
         1,
         1,
@@ -1264,6 +1261,6 @@
         null
       ]
     },
-    "timestamp": 1528216120
+    "timestamp": 1528217262
   }
 }

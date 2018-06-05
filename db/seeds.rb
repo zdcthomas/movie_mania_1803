@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+genres = ['scifi', 'horror', 'comedy', 'drama', 'fantasy', 'mystery']
+
+
+10.times do
+  Genre.create(name: genres.sample)
+end
+
+User.create(username:"zthomas",password:'password',role:1)
