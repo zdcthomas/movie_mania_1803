@@ -8,5 +8,6 @@ describe 'User' do
     expect(page).to have_link(href: directors_path)
     expect(page).to have_link(href: actors_path)
     expect(page).to have_link(href: movies_path)
+    expect(page).to have_link(href: genres_path)
   end
 end
