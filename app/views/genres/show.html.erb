@@ -1,7 +1,7 @@
-<p>Highest Rated Movie: <%= @highest_rated.title %>, <%= @highest_rated.rating %> stars </p>
-<p>Lowest Rated Movie: <%= @lowest_rated.title %>, <%= @lowest_rated.rating %> stars </p>
+<p>Highest Rated Movie: <%= link_to  "#{@highest_rated.title}", movie_path(@highest_rated.slug) %>, <%= @highest_rated.rating %> stars </p>
+<p>Lowest Rated Movie: <%= link_to  "#{@lowest_rated.title}", movie_path(@lowest_rated.slug) %>, <%= @lowest_rated.rating %> stars </p>
 
 <p>Average Rating: <%= @average_rating %> </p>
 <% @movies.each do |movie| %>
-  <%= link_to  "#{movie.title}", movie_path(movie.slug) %>
+  <%= link_to "#{movie.title}", movie_path(movie.slug) %>
 <% end %>
