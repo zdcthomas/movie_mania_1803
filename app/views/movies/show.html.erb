@@ -8,12 +8,12 @@
 
 <p> "Genres for this Movie:" </p>
 <% @genres.each do |genre| %>
-  <%= genre.name %>
+  <%= link_to "#{genre.name}", genre_path(genre) %>
 <% end %>
 
 <p>Similarly Rated Movies:</p>
 <% @similarly_rated.each do |movie| %>
-  <%= movie.title %>
+  <%= link_to  "#{movie.title}", movie_path(movie.slug) %>
   <%= movie.description %>
   </br>
 <% end %>
