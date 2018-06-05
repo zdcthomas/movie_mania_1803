@@ -44,6 +44,27 @@ RSpec.describe Genre, type: :model do
 
         expect(genre.highest_rated.title).to eq(movie.title)
       end
+    describe 'lowest_rated' do
+      it 'should return the lowest rated movie' do
+        genre = Genre.create!(name:'Horror')
+        director = Director.create!(name:'Mel Brooks')
+        movie = genre.movies.create!(title:'spaceballs',
+                                      description:'Things in space',
+                                      director_id:director.id,
+                                      rating:5)
+
+        movie2 = genre.movies.create!(title:'spaceballs 2',
+                                      description:'Theres a second one?',
+                                      director_id:director.id,
+                                      rating:3)
+
+        movie3 = genre.movies.create!(title:'spaceballs 3',
+                                        description:'No please not another one',
+                                        director_id:director.id,
+                                        rating:1)
+
+        expect(genre.highest_rated.title).to eq(movie3.title)
+      end
     end
   end
 end
