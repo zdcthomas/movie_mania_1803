@@ -31,18 +31,18 @@ RSpec.describe Genre, type: :model do
                                       description:'Things in space',
                                       director_id:director.id,
                                       rating:5)
+
         movie2 = genre1.movies.create!(title:'spaceballs 2',
-          description:'Theres a second one?',
-          director_id:director.id,
-          rating:3)
+                                      description:'Theres a second one?',
+                                      director_id:director.id,
+                                      rating:3)
 
         movie3 = genre1.movies.create!(title:'spaceballs 3',
-          description:'No please not another one',
-          director_id:director.id,
-          rating:1)
+                                        description:'No please not another one',
+                                        director_id:director.id,
+                                        rating:1)
 
-          expect(genre.highest_rated.title).to eq(movie.title)
-        end
+        expect(genre.highest_rated.title).to eq(movie.title)
       end
     end
   end
