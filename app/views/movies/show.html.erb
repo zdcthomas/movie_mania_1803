@@ -10,3 +10,9 @@
 <% @genres.each do |genre| %>
   <%= genre.name %>
 <% end %>
+
+<p>Similarly Rated Movies:</p>
+<% @similarly_rated.each do |movie| %>
+  <%= movie.title %>
+  <%= movie.description %>
+<% end %>

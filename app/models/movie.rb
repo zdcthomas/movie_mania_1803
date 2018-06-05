@@ -10,4 +10,8 @@ class Movie < ApplicationRecord
   def generate_slug
     self.slug = title.parameterize
   end
+
+  def similarly_rated
+    Movie.where(rating: rating)
+  end
 end
