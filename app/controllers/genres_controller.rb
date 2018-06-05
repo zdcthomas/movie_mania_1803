@@ -2,6 +2,8 @@ class GenresController < ApplicationController
   def index
     @genres = Genre.all
     @new_genre = Genre.new
+    @admin = current_admin?
+    # current_admin in the view was throwing a no method error
   end
   
   def create
