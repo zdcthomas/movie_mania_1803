@@ -597,6 +597,35 @@
         null,
         null
       ],
+      "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/spec/features/visitor_visits_movie_shows_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/spec/models/actor_movie_spec.rb": [
         1,
         null,
@@ -670,11 +699,11 @@
         1,
         null,
         1,
-        55,
+        56,
         null,
         null,
         1,
-        41,
+        42,
         null,
         null,
         1,
@@ -738,7 +767,7 @@
         1,
         null,
         1,
-        15,
+        16,
         null,
         null
       ],
@@ -824,12 +853,12 @@
         1,
         null,
         1,
-        52,
+        53,
         null,
         null,
         1,
-        37,
-        37,
+        38,
+        38,
         4,
         null,
         null,
@@ -876,7 +905,8 @@
         null,
         null,
         1,
-        2,
+        3,
+        3,
         null,
         null,
         1,
@@ -921,6 +951,12 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/app/models/genre_movie.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/app/controllers/actors_controller.rb": [
@@ -1002,14 +1038,8 @@
         2,
         null,
         null
-      ],
-      "/Users/zacharythomas/turing/2module/final-test/movie_mania_1803/app/models/genre_movie.rb": [
-        1,
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1528213066
+    "timestamp": 1528213479
   }
 }
