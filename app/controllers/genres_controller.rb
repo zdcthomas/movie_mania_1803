@@ -22,6 +22,8 @@ class GenresController < ApplicationController
     @average_rating = @genre.average_rating
     @movies = @genre.movies
     @highest_rated = @genre.highest_rated
+    @lowest_rated = @genre.lowest_rated
+
   end
   private
 
