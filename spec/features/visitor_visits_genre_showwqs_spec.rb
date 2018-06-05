@@ -37,7 +37,7 @@ RSpec.feature "VisitorVisitsGenreShowwqs", type: :feature do
           director_id:director.id,
           rating:1)
 
-        visit genre_path(genre)
+        visit genre_path(genre1)
         
         expect(page).to have_content("Average Rating: 3")
       end
