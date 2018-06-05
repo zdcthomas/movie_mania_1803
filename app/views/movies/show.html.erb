@@ -6,7 +6,7 @@
 
 <p>Directed by: <%= @movie.director.name %></p>
 
-<h1> "Genres for this Movie:" </h1>
+<p> "Genres for this Movie:" </p>
 <% @genres.each do |genre| %>
   <%= genre.name %>
 <% end %>
@@ -15,4 +15,5 @@
 <% @similarly_rated.each do |movie| %>
   <%= movie.title %>
   <%= movie.description %>
+  </br>
 <% end %>

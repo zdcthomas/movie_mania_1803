@@ -36,7 +36,6 @@ describe Movie, type: :model do
                               description:'sigh',
                               director_id:director.id,
                               rating:2)
-
         movie1.similarly_rated.each do |movie|
           expect(movie.rating).to eq(movie1.rating)
         end
