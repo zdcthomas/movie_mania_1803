@@ -5,4 +5,8 @@ class Genre < ApplicationRecord
   def average_rating
     movies.average(:rating)
   end
+
+  def highest_rated
+    movies.order(:rating).last
+  end
 end

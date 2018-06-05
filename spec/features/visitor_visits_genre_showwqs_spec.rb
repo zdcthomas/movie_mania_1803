@@ -60,7 +60,7 @@ RSpec.feature "VisitorVisitsGenreShowwqs", type: :feature do
 
         visit genre_path(genre1)
 
-        expedct(page).to have_content("Highest Rated Movie: #{movie.title}, #{movie.rating} stars")
+        expect(page).to have_content("Highest Rated Movie: #{movie.title}, #{movie.rating} stars")
       end
     end
   end

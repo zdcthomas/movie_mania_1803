@@ -21,6 +21,7 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:id])
     @average_rating = @genre.average_rating
     @movies = @genre.movies
+    @highest_rated = @genre.highest_rated
   end
   private
 
