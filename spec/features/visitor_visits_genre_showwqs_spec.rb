@@ -39,7 +39,7 @@ RSpec.feature "VisitorVisitsGenreShowwqs", type: :feature do
 
         visit genre_path(genre1)
         
-        expect(page).to have_content("Average Rating: 3")
+        expect(page).to have_content("Average Rating: #{genre1.average_rating}")
       end
       it 'should show the highest rated movie for that genre' do
         genre1 = Genre.create!(name:'Horror')
