@@ -11,7 +11,7 @@ class Movie < ApplicationRecord
     self.slug = title.parameterize
   end
 
-  def similarly_rated
-    Movie.where("rating = ? and id != ?", rating, id).limit(3)
+  def self.similarly_rated(movie)
+    where("rating = ? and id != ?", movie.rating, movie.id).limit(3)
   end
 end
